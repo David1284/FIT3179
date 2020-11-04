@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<head>
+   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- Title  -->
+<div class="w3-light-green w3-padding-32 w3-center " >
+  <h1 style="color:white;font-size:45px;" >Tobacco Smoking</h1>
+</div>
+
+
+<!--The rise of Tobacco smoking -->
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third w3-justify">
+    <h2><center>The rise of Tobbaco smoking</center></h2>
+    <p>
+        Smoking is one of the most highly addictive forms of recreational drug use which is being practised by over one
+        billion people globally. Tobacco was largely practised by people especially young adults when it was first
+        invented but over the years, the perception surround smoking as changed. This could be attributed to the fact
+        that the adverse effect of this act became more prominent. Consequently, this act came to be viewed in a
+        decidedly negative light, especially in western countries. Its rise has become much more observable in
+        recent years.
+    </p>
+  </div>
+
+
+    <!-- Impact of Tobbaco  -->
+  <div class="w3-third w3-justify">
+      <h2><center>Impact of Tobbaco</center></h2>
+      <p>
+          Tobacco smoking is a major cause of one of the world's largest health problems. Throughout the 20th century,
+          this tobacco smoking killed around 100 million people. The stats reveals that most of these people are in rich countries.
+          This act claims the life of approximately 8 million people each year. After extensive research, scientists
+          have suggested that tobacco smoking could claim up to one billion people over the 21st century. It is also
+          responsible for some respiratory diseases like lung cancer and could cause an increase blood pressure
+          and heart rate.
+      </p>
+   </div>
+
+
+    <!-- Life Expectancy   -->
+  <div class="w3-third w3-justify">
+    <h2><center>Visualisation</center></h2>
+    <p>
+        The following visualisations seeks to explore the effect Tobacco smoking has on the life expectancy of a country.
+        It contains a map of the life expectancy, cigarette consumption and death rate of people around the world.
+        I then move on to compare the lowest and highest cigarette consumption rate of people around the world with
+        the least and highest death rate caused by Tobacco smoking. This was achieved using histograms .
+        Finally, I uses a scatter plot to help view the relationship between Cigarette consumption and life Expectancy.
+    </p>
+  </div>
+</div>
+
+    &ensp;
+
+    <!-- Middle section  -->
+    <!-- does tobbaco really have an impact on us  -->
+    <div class="content">
+        <div class="w3-container w3-center w3-light-grey" style="padding:10px 16px" id="pricing">
+        <h2 >Smoking is one of the causes of early death</h2>
+        <p>
+            "Tobacco smoking is one of the worlds largest health problems. Over the course of the 20th century, it killed around 100 million people, most of them in today’s rich countries.5 The health burdens of smoking are now moving from high-income to low-to-middle income countries; some estimates have suggest that one billion people could die from tobacco over the 21st century."
+        </p>
+    </div>
+</div>
+
+&ensp;
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+      <div id="choropleth_map" ></div>
+          <h2>Life expectancy</h2>
+          <p>The Map on the right shows the life expectancy of people around the world. It can be seen that most of the countries in the higher end of the life expectancy spectrum are generally first world countries. This phenomena can be attributed to the fact that the medical services and facilities are generally more advanced and developed for treating people.</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+</div>
+
+
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+      <div id="choropleth_map2" ></div>
+          <h2>Cigarette Consumption </h2>
+          <p>This map shows the amount of cigarette been consumed by people around the world. It can be seen that countries in Asia and most western countries generally have the highest cigarette consumption rate. When drawing inferences from this visualisation. </p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+      </div>
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+      <div id="choropleth_map3" ></div>
+          <h2>Death by Tobacco</h2>
+          <p>We must consider the fact that the population of the country can largely impact the cigarette consumption rate. This begs the question on whether western countries and countries with large population in Asia would have the most deaths caused by cigarette smoking.</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>Based on the map to the right, this seems to be the case. However, some outliers are worth taking note of; Countries like Central African Republic and Zimbabwe which have a relatively low cigarette consumption seem to have more deaths.
+          It would be a fair assumption to make if one states that this observation might be the result of a lack of advanced medical services to prevent the fatality of Tobacco consumption.</p>
+          <p>&ensp;</p>
+      </div>
+</div>
+
+
+
+ <div class="content">
+        <div class="w3-container w3-center w3-light-grey" style="padding:10px 16px" id="pricing">
+        <h2 >Cigarette Consumption</h2>
+        <p>
+            Cigarette consumption has become steadily increasing over the year.
+            The visualisations below show nine countries with the highest cigarette consumption rates
+            and the lowest consumption rates.
+        </p>
+    </div>
+ </div>
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+      <div id="Highest_ciga" ></div>
+          <h2>Highest cigarette consumption</h2>
+          <p>
+              The histogram on the right shows countries with the highest cigarette consumption rate. It can be seen that most
+              of this countries are from Europe and Asia. Countries like China and India which have the largest population
+              don't seem to be among the countries with the highest cigarette consumption. This reveals that the population of
+              a country is not a strong determinant of the cigarette consumption rate.
+          </p>
+      </div>
+</div>
+
+
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+        <div id="Lowest_ciga" ></div>
+          <h2>Lowest cigarette consumption</h2>
+          <p>
+              Most of the countries with the lowest cigarette consumption rates are African countries.Although India is the
+              second most populous nation in the world, it has the 6th lowest cigarette consumption rate in the world.
+              Just as seen in the cigarette consumption map, first world countries seem to consume more Cigarette than
+              third and even second world countries.
+          </p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+      </div>
+</div>
+
+
+
+ <div class="content">
+        <div class="w3-container w3-center w3-light-grey" style="padding:10px 16px" id="pricing">
+        <h2 >Death Rate</h2>
+        <p>
+            Tobacco smoking is one of the worlds largest health problems. Over the course of the 20th century.
+            it killed around 100 million people.
+            The visualisation below shows nine countries with the most and least death rates caused by Tobacco smoking.
+        </p>
+    </div>
+ </div>
+
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+          <div id="Highest_death" ></div>
+              <h2>Most deaths by Tobacco</h2>
+              <p>
+                  The visualisation to the right shows the top nine countries with the highest cigarette consumption
+                  It can be seen that none of this countries are part of the top nine countries with the highest cigarette
+                  consumption. This shows that the cigarette consumption rate of a country doesnt have a great effect on
+                  the numbers of death caused by cigarette consumption. This is because the quality of medical services
+                  varies across countries
+              </p>
+      </div>
+</div>
+
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+        <div id="Lowest_death" ></div>
+          <h2>Least Deaths by Tobacco</h2>
+          <p>
+              As we can see south sudan, Nigeria are countries with the least deaths by Tobacco. This might because they
+              have relatively lower cigarette consumption rate . It can also be seen that most of the countries with the
+              least deaths caused by Tobacco are African countries.
+          </p>
+          <p>
+              If the cigarette consumption of a country truly affect the average life expectancy of people in that country,
+              then countries with very high cigarette consumption should have a reduced life expectancy. This hypothesis will
+              be explored in the visualisation below
+          </p>
+      </div>
+</div>
+
+
+
+ <div class="content">
+        <div class="w3-container w3-center w3-light-grey" style="padding:10px 16px" id="pricing">
+        <h2 >Relationship between Smoking and life expectancy</h2>
+        <p>
+            Tobacco smoking is one of the worlds largest health problems. Over the course of the 20th century, it killed around 100 million people, most of them in today’s rich countries.5 The health burdens of smoking are now moving from high-income to low-to-middle income countries; some estimates have suggest that one billion people could die from tobacco over the 21st century.
+        </p>
+    </div>
+ </div>
+
+
+<div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-justify">
+      <div id="scatter_plot" ></div>
+          <h2>Life Expectancy</h2>
+          <p>The Map on the right shows the life expectancy of people around the world. It can be seen that most
+              of the countries in the higher end of the life expectancy spectrum are generally first world countries.
+              This phenomena can be attributed to the fact that the medical services and facilities are generally more
+              advanced and developed for treating people.</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>
+              As we can see most of the countries in Europe occupy the top right of the visualisation
+              This means they have a higher cigarette consumption and life expectancy.
+          </p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+          <p>&ensp;</p>
+      </div>
+</div>
+
+
+ <div class="content">
+        <div class="w3-container w3-center w3-light-grey" style="padding:10px 16px" id="pricing">
+        <p>
+            Although, Tobacco smoking is detrimental to the health and is one of the major causes of early death,
+            there doesn't exist a strong positive correlation between the cigarette consumption per capital of a
+            country and the life expectancy of people within that country.There are other factors that might have a stronger
+            effect on the life expectancy of a country such as the standard of living and the Accessibility of grounded medical services.
+        </p>
+    </div>
+ </div>
+
+
+      <script type="text/javascript">
+        var vis1 = "json/life_expectancy.json";
+        var vis2 = "Cigarette_consumption/js/cigarette_consumption_interactive.vg.json";
+        var vis3 = "Cigarette_consumption/js/Cigarette_map.json";
+        var vis4 = "json/Death_rate.json";
+        var vis5 = "json/highest_cigarette_consumption.json"
+        var vis6 = "json/lowest_cigarette_consumption.json"
+        var vis7 = "json/Highest_deaths.json"
+        var vis8 = "json/lowest_death.json"
+
+
+        vegaEmbed('#choropleth_map', vis1).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+
+        vegaEmbed('#scatter_plot', vis2).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+
+        vegaEmbed('#choropleth_map2', vis3).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+        vegaEmbed('#Highest_ciga', vis5).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+        vegaEmbed('#Lowest_ciga', vis6).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+
+        vegaEmbed('#Lowest_death', vis8).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#Highest_death', vis7).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+
+        vegaEmbed('#choropleth_map3', vis4).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      </script>
+
+  </body>
+</html>
+
