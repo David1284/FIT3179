@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 730,
+  "title":  "Highest cigarette consumption",
+  "data": {
+    "values": [
+      {"name": "Luxembourg", "count": 6330.872751},
+      {"name": "Belarus", "count": 2911.297899
+},
+      {"name": "North Macedonia", "count": 2784.928251
+},
+      {"name": "Albania", "count": 2491.599232
+},
+      {"name": "Belgium", "count": 2440.880001
+},
+      {"name": "Czech Republic", "count": 2427.882737
+},
+      {"name": "Jordan", "count": 2306.093102
+},
+      {"name": "Russia", "count": 2294.962234
+},
+      {"name": "Syria", "count": 2291.742623
+}
+    ]
+  },
+  "encoding": {
+    "y": {"field": "name", "type": "nominal", "sort": "-x", "title": null},
+    "x": {"field": "count", "type": "quantitative", "title": null}
+  },
+  "layer": [{
+    "mark": "bar",
+    "encoding": {
+      "color": {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Cigarettes consumption"
+      }
+    }
+  }, {
+    "mark": {
+      "type": "text",
+      "align": "right",
+      "xOffset": -4,
+      "aria": false
+    }
+  }]
+}
