@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 730,
+  "title":  "Most deaths from cigarette consumption",
+  "data": {
+    "values": [
+      {"name": "Kiribati", "count": 274.0354134},
+      {"name": "Papua New Guinea", "count": 250.0556372},
+      {"name": "Oceania", "count": 209.9257918},
+      {"name": "Greenland", "count": 192.3563153},
+      {"name": "Myanmar", "count": 183.6493789},
+      {"name": "Lesotho", "count": 170.8845842},
+      {"name": "Montenegro", "count": 169.1250737},
+      {"name": "Solomon Islands", "count": 169.063979},
+      {"name": "Ukraine", "count": 166.3105342}
+    ]
+  },
+  "encoding": {
+    "y": {"field": "name", "type": "nominal", "sort": "-x", "title": null},
+    "x": {"field": "count", "type": "quantitative", "title": null}
+  },
+  "layer": [{
+    "mark": "bar",
+    "encoding": {
+      "color": {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Cigarettes consumption",
+        "scale": {
+          "range": ["white","red"]
+        }
+      }
+    }
+  }, {
+    "mark": {
+      "type": "geoshape",
+      "align": "right",
+      "xOffset": -4,
+      "aria": false
+    }
+  }]
+}
