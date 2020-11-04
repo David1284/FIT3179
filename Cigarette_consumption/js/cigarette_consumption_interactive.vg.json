@@ -1,8 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
- "width": 500,
- "height": 400,
- "title": "Relationship between cigarette consumption and life expectancy",
+ "title": "Relationship between Ciga consumption and life expectancy",
+ "width": 800,
+ "height": 360,
  "data": {
  "url": "https://raw.githubusercontent.com/David1284/FIT3179/main/Cigarette_consumption/data/Life_expectancy_cigarette.csv"
  },
@@ -14,9 +14,9 @@
  "bind": {
  "input": "range",
  "min": 0,
- "max": 100000000,
- "step": 1000000,
- "name": "Cigarette consumption: "
+ "max": 81,
+ "step": 1,
+ "name": "smoking rate: "
  }
  },
  {
@@ -41,23 +41,22 @@
  "Asia",
  "Oceania"
  ],
- "name": "Continent: "
+ "name": "Continents:"
  }
  }
  ],
  "transform": [
-   {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+   {"filter": "Continent_selection == null || datum['Continent '] == Continent_selection"},
+   {"filter": "datum.Life_expectancy > Life_expec"}
+
  ],
  "selection": {
  "continent_highlight": {
  "type": "multi",
- "fields": ["Continent"],
+ "fields": ["Continent "],
  "bind": "legend"
  }
  },
-
-
-
  "mark": "circle",
  "encoding": {
  "x": {
@@ -73,19 +72,38 @@
  "axis": {"tickCount": 4},
   "scale": {"type": "linear", "domain": [40, 90]}
  },
- 
- "color": {
+"color": {
  "field": "Continent ",
- "type": "nominal"
+ "type": "nominal",
+ "scale": {
+ "domain": [
+ "North America",
+ "South America",
+ "Europe",
+ "Africa",
+ "Asia",
+ "Oceania"
+ ],
+ "range": [
+ "#e41a1c",
+ "#377eb8",
+ "#4daf4a",
+ "#984ea3",
+ "#ff7f00",
+ "#ffff33"
+ ]
+ }
  },
- "opacity":{"value": 0.8
+ "opacity":{
+   "condition": {"selection": "continent_highlight", "value": 0.8},
+   "value": 0.2
  },
  "size": {
    "field": "Cigarette_consumption",
 "scale": {
  "type": "threshold",
- "domain": [1000,3000,6000],
- "range": [40,80,120]
+ "domain": [500,1000,2000,4000],
+ "range": [20,40,80,120]
  },
  "legend": {"format": ".1s"}
 },
